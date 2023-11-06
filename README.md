@@ -1,4 +1,4 @@
-# StoreTableReservationService
+# RestaurantTableReservationService
 
 ## Table of Contents
 - [Getting Started](#getting-started)
@@ -19,7 +19,7 @@ To get started with this Spring project, follow these steps:
 ## Usage
 
 Here's an example of how to use this Spring project:
--Go to [http://localhost:8080/](http://localhost:8080/)http://localhost:8080/ after running the application
+-Go to [http://localhost:8080/]http://localhost:8080/ after running the application
 -The UI should be easy to follow and guide you through the app (if not my apology)
 -Here are some of the main controller apis listed below
 
