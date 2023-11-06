@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <a href="/partner/index">Home</a>
+    |
+    <a href="/partner/register">register as partner restaurant</a>
+    |
+    <a href="/partner/info">partner info</a>
+    |
+    <a href="/partner/login">log in</a>
+    |
+    <a href="/logout">logout</a>
+</div>
+
+<h1> Member Info </h1>
+
+<div class="info">
+
+<table>
+    <thead>
+    <tr>
+        <th>user name</th>
+        <th>Store Name</th>
+        <th>Location</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="x : ${info}">
+        <td th:text="${x.userName}"></td>
+        <td th:text="${x.storeName}"></td>
+        <td th:text="${x.location}"></td>
+        <td th:text="${x.description}"></td>
+    </tr>
+
+    </tbody>
+</table>
+
+</div>
+
+
+</body>
+</html>

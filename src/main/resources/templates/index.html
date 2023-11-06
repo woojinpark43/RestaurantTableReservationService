@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Restaurant Reservation Service</h1>
+
+
+<div th:if="${result}">
+
+     <h1> Welcome <span th:text="${username}"/></h1>
+
+</div>
+
+<div>
+    <a href="/">Home</a>
+    |
+    <a href="/login">login</a>
+    |
+    <a href="/member/register">Member register</a>
+    |
+    <a href="/logout">logout</a>
+    |
+    <a href="/partner/index">Partner Restaurant</a>
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <th>user name</th>
+        <th>Store Name</th>
+        <th>Location</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="x : ${info}">
+        <td th:text="${x.storeName}"></td>
+        <td th:text="${x.location}"></td>
+        <td th:text="${x.description}"></td>
+        <td><button><a th:href="@{'/reservation?' + ${x.userName + '-' + x.storeName}}">reserve</a></button></td>
+    </tr>
+
+    </tbody>
+
+</body>
+</html>

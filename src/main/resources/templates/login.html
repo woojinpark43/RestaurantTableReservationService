@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>partner login</title>
+</head>
+<body>
+
+<div>
+    <a href="/">Back to home</a>
+</div>
+
+<h1> Login Page </h1>
+
+<div th:text="${errorMessage}">
+</div>
+
+<form method="post" action="/login">
+    <div>
+        <input type="text" name="username" placeholder="ID" required/>
+    </div>
+    <div>
+        <input type="password" name="password" placeholder="password" required/>
+    </div>
+    <div>
+        <button type="submit"> 로그인 </button>
+    </div>
+</form>
+</body>
+</html>

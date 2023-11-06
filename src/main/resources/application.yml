@@ -1,0 +1,19 @@
+spring:
+  thymeleaf:
+    suffix: .html
+    prefix: classpath:/templates/
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/storereservation
+    username: root
+    password: Aamysql@0720
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  mybatis:
+    mapper-locations: mybatis/**/*.xml
+    configuration:
+      map-underscore-to-camel-case: true
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

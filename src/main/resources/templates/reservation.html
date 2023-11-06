@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title Reservation</title>
+</head>
+<body>
+
+<div>
+    <a href="/">Home</a>
+    |
+    <a href="/logout">logout</a>
+</div>
+
+<h1>Reservation Form</h1>
+<form method="post" action="/reservation">
+    <label for="reservationDate">Select Date:</label>
+    <input type="date" id="reservationDate" name="reservationDate" required>
+
+    <label for="reservationTime">Select Time:</label>
+    <select id="reservationTime" name="reservationTime" required>
+        <option value="09:00 AM">09:00 AM</option>
+        <option value="10:00 AM">10:00 AM</option>
+        <option value="11:00 AM">11:00 AM</option>
+        <!-- Add more time options as needed -->
+    </select>
+
+    <input type="submit" value="Submit Reservation">
+</form>
+
+
+</body>
+</html>

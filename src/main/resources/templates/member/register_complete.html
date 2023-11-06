@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Member Register Complete</title>
+</head>
+<body>
+
+<div>
+    <a href="/">Home</a>
+    |
+    <a href="/login">login</a>
+    |
+    <a href="/member/register">register</a>
+    |
+    <a href="/logout">logout</a>
+    |
+    <a href="/partner/index">Partner Restaurant</a>
+</div>
+
+<div th:if="${result}">
+    <h1>회원 가입</h1>
+    <p>회원 가입이 완료되었습니다</p>
+</div>
+
+<div th:if="${result eq false}">
+    <h1>회원 가입 결과</h1>
+    <p>회원 가입 실패하였습니다</p>
+</div>
+
+</body>
+</html>

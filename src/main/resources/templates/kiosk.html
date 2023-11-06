@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title Reservation</title>
+</head>
+<body>
+
+<div>
+    <a href="/">Home</a>
+</div>
+
+<h1>Kiosk</h1>
+<div class="kiosk">
+
+    <div th:if="${result}">
+        <p>wrong kiosk num</p>
+    </div>
+
+    <div>
+        <form method="post" action="kiosk">
+            <input th:value="${param.searchValue}" type="text" name="searchValue"/>
+            <button type="submit"/> search </button>
+        </form>
+    </div>
+
+
+</body>
+</html>
