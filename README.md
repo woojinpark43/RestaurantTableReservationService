@@ -5,7 +5,7 @@
 - [Usage](#usage)
 - [Configuration](#configuration)
 - [Contributing](#contributing)
-- [License](#license)
+- [Author](#author)
 
 ## Getting Started
 
