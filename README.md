@@ -97,7 +97,6 @@ This project uses the following configurations:
 - Spring Boot Security
 - JPA
 - Maven
-- War
 
 ## Contributing
 
