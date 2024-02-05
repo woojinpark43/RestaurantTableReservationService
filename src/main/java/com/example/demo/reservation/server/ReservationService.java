@@ -7,4 +7,5 @@ import com.example.demo.reservation.entity.Reservation;
 public interface ReservationService {
     boolean register(String userName, String storeName, ReservationInput parameter);
     boolean checkKiosk(String kioskNum);
+    boolean deleteKiosk(String searchValue);
 }

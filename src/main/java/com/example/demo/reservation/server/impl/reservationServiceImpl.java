@@ -53,4 +53,15 @@ public class reservationServiceImpl implements ReservationService {
         }
         return true;
     }
+
+    @Override
+    public boolean deleteKiosk(String kioskNum) {
+
+        Optional<Reservation> optionalKiosk = reservationRepository.findById(kioskNum);
+        if(optionalKiosk.isEmpty()){
+            return false;
+        }
+        reservationRepository.delete(optionalKiosk.get());
+        return true;
+    }
 }

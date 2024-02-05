@@ -4,6 +4,7 @@ import com.example.demo.reservation.server.ReservationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -34,5 +35,20 @@ public class KioskController {
         }
 
         return "kiosk_complete";
+    }
+
+    @DeleteMapping("/kiosk")
+    public String kioskDelete(@RequestParam("searchValue") String searchValue, Model model) {
+
+        System.out.println(searchValue);
+        boolean result = reservationService.deleteKiosk(searchValue);
+
+        model.addAttribute("result", result);
+
+        if (!result) {
+            return "kiosk";
+        }
+
+        return "kioskDelete_complete";
     }
 }
